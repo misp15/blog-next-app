@@ -5,7 +5,7 @@ import client from "../sanity-client";
 
 export default function Home(props) {
   const { post } = props;
-  console.log(post[0].title, "ppp");
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,7 +18,7 @@ export default function Home(props) {
         {post?.map((onePost, idx) => (
           <a
             key={onePost._id}
-            href={onePost.slug.current}
+            href={`post/${onePost.slug.current}`}
             className={styles.card}
           >
             <h2>{onePost.title} &rarr;</h2>
